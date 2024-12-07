@@ -39,6 +39,10 @@ android {
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig = signingConfigs.debug
         }
+        debug {
+        minifyEnabled false
+        shrinkResources false
+    }
     }
 
     testOptions {
@@ -51,5 +55,5 @@ flutter {
 }
 
 dependencies {
-    androidTestUtil "androidx.test:orchestrator:1.4.2"
+    androidTestUtil "androidx.test:orchestrator:1.5.1"
 }
